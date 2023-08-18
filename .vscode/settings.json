@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"sdl_opengl.h": "c",
+		"sdl.h": "c",
+		"sdl_video.h": "c",
+		"sdl_system.h": "c",
+		"sdl_events.h": "c",
+		"sdl_keyboard.h": "c"
+	}
+}
