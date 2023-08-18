@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include <ruby.h>
-#include <SDL/SDL.h>
+#include <SDL2/SDL.h>
 
 #if defined(__APPLE_CC__)
   #include <OpenAL/al.h>

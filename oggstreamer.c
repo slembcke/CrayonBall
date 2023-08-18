@@ -240,7 +240,7 @@ timerCallback(Uint32 interval, void *param)
 		else
 			printf("Ogg stream was interrupted. Stopping music.\n");
 		
-		SDL_SetTimer(0, NULL);
+		SDL_RemoveTimer(ogg->timer);
 	}
 	
 	return active ? interval : 0;
