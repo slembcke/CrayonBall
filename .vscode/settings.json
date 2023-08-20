@@ -5,6 +5,8 @@
 		"sdl_video.h": "c",
 		"sdl_system.h": "c",
 		"sdl_events.h": "c",
-		"sdl_keyboard.h": "c"
+		"sdl_keyboard.h": "c",
+		"glu.h": "c",
+		"glext.h": "c"
 	}
 }

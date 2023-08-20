@@ -130,6 +130,9 @@ VALUE rbas_open_screen(int argc, VALUE *argv, VALUE self)
   int w = NUM2INT(width), h = NUM2INT(height);
   WINDOW = SDL_CreateWindow(title, 0, 0, w, h, videoflags);
   
+  SDL_GLContext* context = SDL_GL_CreateContext(WINDOW);
+  SDL_GL_MakeCurrent(WINDOW, context);
+  
   print_video_info();
   SDL_GetWindowSizeInPixels(WINDOW, &AS_SCREEN_W, &AS_SCREEN_H);
 	

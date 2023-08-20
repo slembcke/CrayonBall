@@ -48,7 +48,7 @@ static void do_key(SDL_Event event){
 		INT2FIX(event.key.keysym.sym),
 		modifiers
 	};
-	rb_yield(rb_class_new_instance(3, argv, rbas_cKeyboardEvent ));
+	rb_yield(rb_class_new_instance(3, argv, rbas_cKeyboardEvent));
 }
 
 static void do_mouse_button(SDL_Event event){

@@ -12,7 +12,7 @@ begin
 	if ARGV[0] and ARGV[0][0] != ?-
 		require(ARGV.shift)
 	else
-		require('src/main.rb')
+		require('ruby/main.rb')
 	end
 rescue SystemExit, Interrupt
   Kernel.puts "Exit request caught."
