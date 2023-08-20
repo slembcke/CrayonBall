@@ -118,7 +118,7 @@ class AbstractGameBoard
 	
 	attr_reader :view_node, :score, :balls, :effects
 	
-	BOTTOM_SEGMENT_TYPE = Object.new
+	BOTTOM_SEGMENT_TYPE = 9857
 	
 	def init_space
 		@space = CP::Space.new

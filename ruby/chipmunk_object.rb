@@ -55,6 +55,13 @@ module CP
 		def remove_from_space(space)
 			space.remove_shape(self)
 		end
+		
+		class Circle
+			include Shape
+		end
+		class Segment
+			include Shape
+		end
 	end
 		
 	module Constraint

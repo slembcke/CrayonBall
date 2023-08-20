@@ -32,7 +32,7 @@ class AbstractBall
 #		Photon::Color.new(193/255.0, 81/255.0, 184/255.0),
 #	]
 	
-	UNCOLLIDED_COLLISION_TYPE = Object.new
+	UNCOLLIDED_COLLISION_TYPE = 12345
 	
 	class Shape < CP::Shape::Circle
 		attr_reader :ball

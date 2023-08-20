@@ -13,9 +13,9 @@ Music.volume = GamePrefs.music_volume
 Mixer.volume = GamePrefs.effects_volume
 
 Thread.new {
-	Intro.play
-	sleep 4.711
-	Music.play
+	# Intro.play
+	# sleep 4.711
+	# Music.play
 }
 
 # Show the splash screen
