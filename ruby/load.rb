@@ -1,7 +1,7 @@
 require 'ruby/resourcecache.rb'
 
-require 'chipmunk_object.rb'
-require 'photon'
+require 'ruby/chipmunk_object.rb'
+require 'ruby/photon.rb'
 
 require 'ruby/aerosol.rb'
 

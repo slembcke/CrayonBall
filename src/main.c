@@ -9,6 +9,8 @@ extern void Init_opengl(void);
 extern void Init_cp(void);
 extern void Init_openal(void);
 extern void Init_myAdditions(void);
+extern void Init_chipmunk(void);
+extern void Init_photonEXT(void);
 
 extern void showRegistrationDialog(void);
 
@@ -37,6 +39,8 @@ int main(int argc, char *argv[])
 	Init_opengl();
 	Init_openal();
 	Init_myAdditions();
+	Init_chipmunk();
+	Init_photonEXT();
 	
 	int err;
 	rb_protect(Start_Aerosol, 0, &err);
