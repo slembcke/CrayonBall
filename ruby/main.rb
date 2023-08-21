@@ -12,16 +12,12 @@ Intro.volume = GamePrefs.music_volume
 Music.volume = GamePrefs.music_volume
 Mixer.volume = GamePrefs.effects_volume
 
-Thread.new {
-	# Intro.play
-	# sleep 4.711
-	# Music.play
-}
-
 # Show the splash screen
 AS.clear_color(1.0, 1.0, 1.0, 1.0)
 LoadScreen.show
-sleep 1.5
+Intro.play
+sleep 4.711
+Music.play
 
 AS.clear_color(0.0, 0.0, 0.0, 0.0)
 AS::GameState.state_machine(MenuStateDelegate.get_state)
