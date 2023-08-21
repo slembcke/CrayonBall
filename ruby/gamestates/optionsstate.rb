@@ -62,20 +62,12 @@ class OptionsStateDelegate
 		
 		picker = AS::MenuController.new
 
-		picker.add_item("800x600", x, y, 0.27, false){
+		picker.add_item("1280x720", x, y, 0.27, false){
 			GamePrefs.screen_value = 0
 		}
 		
-		picker.add_item("1280x800", x, y - 50, 0.27, false){
+		picker.add_item("fullscreen", x, y - 50, 0.27, false){
 			GamePrefs.screen_value = 1
-		}
-		
-		picker.add_item("1440x900", x, y - 100, 0.27, false){
-			GamePrefs.screen_value = 2
-		}
-		
-		picker.add_item("fullscreen", x, y - 150, 0.27, false){
-			GamePrefs.screen_value = 3
 		}
 		
 		picker.make_active(GamePrefs.screen_value)
@@ -85,7 +77,6 @@ class OptionsStateDelegate
 	end
 	
 	def make_volume(title_string, x, y, scale, font, setter)
-
 		back_offset = x - (font.string_width(title_string)*scale + 20)
 		title = AS::QuickTextNode.new(font, title_string, back_offset, y, scale, Photon::Color::Black, false)
 		option = VolumeController.new(x, y, scale)

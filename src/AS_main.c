@@ -100,6 +100,11 @@ static void print_video_info(void)
 //VALUE rbas_open_screen(VALUE self, VALUE width, VALUE height, VALUE hsh)//(int argc, VALUE *argv, VALUE self)
 VALUE rbas_open_screen(int argc, VALUE *argv, VALUE self)
 {
+  if(WINDOW){
+    SDL_GL_DeleteContext(SDL_GL_GetCurrentContext());
+    SDL_DestroyWindow(WINDOW);
+  }
+  
   VALUE width, height, hsh;
   rb_scan_args(argc, argv, "21", &width, &height, &hsh);
 	
@@ -123,7 +128,7 @@ VALUE rbas_open_screen(int argc, VALUE *argv, VALUE self)
 
   Uint32 videoflags = SDL_WINDOW_OPENGL;
   VALUE fullscreen = rb_hash_aref(hsh, ID2SYM(rb_intern("fullscreen")));
-  if(RTEST(fullscreen)) videoflags |= SDL_WINDOW_FULLSCREEN;
+  if(RTEST(fullscreen)) videoflags |= SDL_WINDOW_FULLSCREEN_DESKTOP;
   
   VALUE name = rb_hash_aref(hsh, ID2SYM(rb_intern("name")));
   const char* title = name != Qnil ? StringValuePtr(name) :  "Aerosol";
