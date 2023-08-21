@@ -124,6 +124,16 @@ custom_target(
 	install_mode: 'rwxr-xr-x',
 )
 
+install_data(
+	'com.howlingmoonsoftware.CrayonBall.desktop',
+	install_dir: 'share/applications',
+)
+
+install_data(
+	'com.howlingmoonsoftware.CrayonBall.png',
+	install_dir: 'share/icons/hicolor/512x512/apps',
+)
+
 install_subdir('Aerosol/ruby', install_dir: 'share/games/CrayonBall')
 install_subdir('CrayonBall/src', install_dir: 'share/games/CrayonBall')
 install_subdir('CrayonBall/gfx', install_dir: 'share/games/CrayonBall')
