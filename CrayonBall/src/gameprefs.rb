@@ -1,6 +1,6 @@
 
 GAME_STORAGE_PATH = case RUBY_PLATFORM
-	when /linux/: './'
+	when /linux/: File.expand_path('~/.crayonball/')
 	when /darwin/: File.expand_path('~/Library/Application Support/CrayonBall/')
 	when /mingw/:  ENV['APPDATA'] ? ENV['APPDATA'] + '/Scribball/' : 'prefs'
 end
@@ -9,7 +9,7 @@ prefsClass = Class.new do
 	attr_reader :effects_value, :music_value, :screen_value
 	attr_accessor :prev_name
 
-	SCREEN_VALUES = [[1280, 720], [0, 0]]
+	SCREEN_VALUES = [[1280, 800], [0, 0]]
 	SOUND_VALUES = [0.0, 0.25**2, 0.5**2, 0.75**2, 1.0]
 	
 	def find_screen_fit

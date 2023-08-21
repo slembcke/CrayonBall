@@ -62,7 +62,7 @@ class OptionsStateDelegate
 		
 		picker = AS::MenuController.new
 
-		picker.add_item("1280x720", x, y, 0.27, false){
+		picker.add_item("1280x800", x, y, 0.27, false){
 			GamePrefs.screen_value = 0
 		}
 		

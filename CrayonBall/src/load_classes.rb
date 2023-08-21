@@ -1,4 +1,4 @@
-VersionString = '2.3.1'
+VersionString = '2.3.2'
 DEBUG_MODE = false unless defined?(DEBUG_MODE)
 
 if DEBUG_MODE
