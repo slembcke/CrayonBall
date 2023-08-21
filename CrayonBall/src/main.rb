@@ -1,8 +1,8 @@
-require 'ruby/load_classes.rb'
+require 'src/load_classes.rb'
 
 GamePrefs.open_screen
 
-require 'ruby/load_screen.rb'
+require 'src/load_screen.rb'
 
 # Load and start music
 Intro = MusicPlayer.new('sfx/intro.ogg', false)
