@@ -39,8 +39,8 @@
   </screenshots>
   
   <content_rating type="oars-1.0" />
-  <metadata_license>CC-NC</metadata_license>
   <project_license>GPL-3.0-only</project_license>
+  <metadata_license>CC-BY-SA-4.0</metadata_license>
   <releases>
     <release version="2.3.2" date="2023-08-21" />
   </releases>
