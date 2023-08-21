@@ -1,6 +1,5 @@
-
 GAME_STORAGE_PATH = case RUBY_PLATFORM
-	when /linux/: File.expand_path('~/.config/crayonball/')
+	when /linux/: File.expand_path('~/.crayonball/')
 	when /darwin/: File.expand_path('~/Library/Application Support/CrayonBall/')
 	when /mingw/:  ENV['APPDATA'] ? ENV['APPDATA'] + '/Scribball/' : 'prefs'
 end
