@@ -134,6 +134,11 @@ install_data(
 	install_dir: 'share/icons/hicolor/512x512/apps',
 )
 
+install_data(
+	'com.howlingmoonsoftware.CrayonBall.metainfo.xml',
+	install_dir: 'share/metainfo',
+)
+
 install_subdir('Aerosol/ruby', install_dir: 'share/games/CrayonBall')
 install_subdir('CrayonBall/src', install_dir: 'share/games/CrayonBall')
 install_subdir('CrayonBall/gfx', install_dir: 'share/games/CrayonBall')
