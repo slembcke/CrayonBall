@@ -6,7 +6,7 @@ project('CrayonBall', 'c',
 cc = meson.get_compiler('c')
 ruby_dir = 'ruby-1.8.7'
 
-exe = executable('crayonball',
+exe = executable('aerosol',
 	[
 		'Aerosol/src/main.c',
 		'Aerosol/src/AS_main.c',
@@ -86,12 +86,42 @@ exe = executable('crayonball',
 		cc.find_library('ruby-static', dirs: join_paths(meson.current_source_dir(), ruby_dir)),
 	],
 	c_args: [
-		'-Wno-unused-parameter', '-Wno-comment', '-Wno-unused-but-set-variable', '-Wno-maybe-uninitialized', '-Wno-unused-const-variable',
-		'-Wno-switch-unreachable', '-Wno-implicit-function-declaration', '-Wno-unused-function', '-Wno-pedantic',
-		'-Wno-unknown-pragmas', '-Wno-parentheses', '-Wno-sign-compare', '-Wno-cast-function-type', '-Wno-deprecated',
-		'-Wno-missing-field-initializers', '-Wno-char-subscripts',
+		'-Wno-unused-parameter',
+		'-Wno-comment',
+		'-Wno-unused-but-set-variable',
+		'-Wno-maybe-uninitialized',
+		'-Wno-unused-const-variable',
+		'-Wno-switch-unreachable',
+		'-Wno-implicit-function-declaration',
+		'-Wno-unused-function',
+		'-Wno-pedantic',
+		'-Wno-unknown-pragmas',
+		'-Wno-parentheses',
+		'-Wno-sign-compare',
+		'-Wno-cast-function-type',
+		'-Wno-deprecated',
+		'-Wno-missing-field-initializers',
+		'-Wno-char-subscripts',
 	],
 	install: true,
+	install_dir: 'share/games/CrayonBall/bin',
+)
+
+# Is there a better way to make a launch script?
+custom_target(
+	'crayonball',
+	capture: true,
+	output: 'crayonball',
+	command: [
+		'echo',
+		'#! /usr/bin/env sh\n',
+		'cd ' + get_option('prefix') + '/share/games/CrayonBall\n',
+		'bin/aerosol\n',
+	],
+	depends: [exe],
+	install: true,
+	install_dir: 'bin',
+	install_mode: 'rwxr-xr-x',
 )
 
 install_subdir('Aerosol/ruby', install_dir: 'share/games/CrayonBall')

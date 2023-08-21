@@ -211,7 +211,7 @@ VALUE Start_Aerosol(VALUE self)
 	rb_define_readonly_variable("registered", &registered);
 	
   // This ruby code loads all of the ruby code for aerosol.
-  rb_funcall(rb_cObject, rb_intern("require"), 1, rb_str_new2("src/load.rb"));
+  rb_funcall(rb_cObject, rb_intern("require"), 1, rb_str_new2("ruby/load.rb"));
 //  rb_require("ruby/load.rb");
   // Register c functions for the different modules
   Init_ASmusic();
