@@ -125,17 +125,17 @@ custom_target(
 )
 
 install_data(
-	'com.howlingmoonsoftware.CrayonBall.desktop',
+	'data/com.howlingmoonsoftware.CrayonBall.desktop',
 	install_dir: 'share/applications',
 )
 
 install_data(
-	'com.howlingmoonsoftware.CrayonBall.png',
+	'data/com.howlingmoonsoftware.CrayonBall.png',
 	install_dir: 'share/icons/hicolor/512x512/apps',
 )
 
 install_data(
-	'com.howlingmoonsoftware.CrayonBall.metainfo.xml',
+	'data/com.howlingmoonsoftware.CrayonBall.metainfo.xml',
 	install_dir: 'share/metainfo',
 )
 
