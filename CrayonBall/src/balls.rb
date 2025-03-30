@@ -141,6 +141,10 @@ class AbstractBall
 	def selected?(pos, proximity_radius=0)
 		@body.pos.near?(pos, @radius + proximity_radius)
 	end
+	
+	def dist(pos)
+		(@body.pos - pos).length - @radius
+	end
 end
 
 class NormalBall < AbstractBall

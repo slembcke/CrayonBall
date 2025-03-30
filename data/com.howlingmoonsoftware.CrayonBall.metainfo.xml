@@ -2,6 +2,7 @@
 <component type="desktop">
   <id>com.howlingmoonsoftware.CrayonBall</id>
   <name>Crayon Ball</name>
+  <launchable type="desktop-id"/>
   <developer_name>Howling Moon Software</developer_name>
   <url type="homepage">http://howlingmoonsoftware.com/crayonball.php</url>
   <categories>
@@ -42,6 +43,15 @@
   <project_license>GPL-3.0-only</project_license>
   <metadata_license>CC-BY-SA-4.0</metadata_license>
   <releases>
+    <release version="2.3.3" date="2025-03-30">
+      <description>
+        <p>Make the game more touchscreen friendly, and fixed some metadata info.</p>
+        <issues>
+          <issue>Added an extra tolerance when clicking on balls to make it easier to play on a touchscreen.</issue>
+          <issue>Added the missing launchable tag to the metainfo.</issue>
+        <issues/>
+      </description>
+    </release>
     <release version="2.3.2" date="2023-08-21" />
   </releases>
 </component>

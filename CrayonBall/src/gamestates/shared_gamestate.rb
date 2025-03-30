@@ -338,7 +338,8 @@ class AbstractGameBoard
 	end
 	
 	def ball_at(pos)
-		@balls.find{|ball| ball.selected?(pos) }
+		ball = @balls.min_by{|ball| ball.dist(pos) }
+		return ball if ball.dist(pos) < 3
 	end
 	
 	def balls_near(pos, radius)
